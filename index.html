@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./st.css" />
+		<title>Simple Todo</title>
+		<script src="./utils.js" type="module" defer></script>
+		<script src="./index.js" type="module" defer></script>
+	</head>
+	<body>
+		<header class="header">
+			<h1>S1mple todo app</h1>
+		</header>
+		<main class="container">
+			<section>
+				<form class="add-todo-form">
+					<input
+						class="add-todo-form__input"
+						placeholder="Add new todo....."
+						name="todoText"
+						data-text-field
+					/>
+					<button class="add-todo-form__btn" data-add-todo>Add new todo</button>
+				</form>
+			</section>
+			<section class="search">
+				<input
+					placeholder="Type for search..."
+					type="search"
+					class="search__input"
+				/>
+			</section>
+			<hr />
+			<ul class="todo-container" data-todo-container></ul>
+		</main>
+
+		<template data-todo-template>
+			<li class="todo-item">
+				<input type="checkbox" class="todo-checkbox" data-todo-checkbox />
+				<div class="todo-info">
+					<p class="todo-text" data-todo-text>Some text</p>
+					<span data-todo-date class="todo-date">01-21-24</span>
+				</div>
+				<button data-todo-remove class="todo-delete-btn">X</button>
+			</li>
+		</template>
+	</body>
+</html>
